@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">auto</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_search">Search</string>
+    <string name="title_followers">Followers</string>
+    <string name="title_add">Add</string>
+    <string name="title_message">Message</string>
+    <string name="title_menu">Menu</string>
 </resources>

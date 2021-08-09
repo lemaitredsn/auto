@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_search">
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="ru.lemaitre.auto.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_followers"
+        android:name="ru.lemaitre.auto.ui.add.AddFragment"
+        android:label="@string/title_followers"
+        tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="ru.lemaitre.auto.ui.follows.FollowsFragment"
+        android:label="@string/title_add"
+        tools:layout="@layout/fragment_follows" />
+    <fragment
+        android:id="@+id/navigation_menu"
+        android:name="ru.lemaitre.auto.ui.menu.MenuFragment"
+        android:label="@string/title_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="ru.lemaitre.auto.ui.message.MessageFragment"
+        android:label="@string/title_message"
+        tools:layout="@layout/fragment_message" />
+</navigation>
