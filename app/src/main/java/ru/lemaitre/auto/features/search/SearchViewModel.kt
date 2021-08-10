@@ -1,4 +1,4 @@
-package ru.lemaitre.auto.ui.search
+package ru.lemaitre.auto.features.search
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

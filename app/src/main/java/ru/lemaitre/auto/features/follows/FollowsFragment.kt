@@ -1,4 +1,4 @@
-package ru.lemaitre.auto.ui.add
+package ru.lemaitre.auto.features.follows
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import ru.lemaitre.auto.databinding.FragmentAddBinding
+import ru.lemaitre.auto.databinding.FragmentFollowsBinding
 
-class AddFragment : Fragment() {
+class FollowsFragment : Fragment() {
 
-    private lateinit var addViewModel: AddViewModel
-    private var _binding: FragmentAddBinding? = null
+    private lateinit var followsViewModel: FollowsViewModel
+    private var _binding: FragmentFollowsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,14 +24,14 @@ class AddFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        addViewModel =
-            ViewModelProvider(this).get(AddViewModel::class.java)
+        followsViewModel =
+            ViewModelProvider(this).get(FollowsViewModel::class.java)
 
-        _binding = FragmentAddBinding.inflate(inflater, container, false)
+        _binding = FragmentFollowsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        addViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textNotifications
+        followsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

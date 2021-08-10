@@ -1,16 +1,15 @@
-package ru.lemaitre.auto.ui.message
+package ru.lemaitre.auto.features.menu
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import ru.lemaitre.auto.databinding.FragmentMessageBinding
+import ru.lemaitre.auto.databinding.FragmentMenuBinding
 
-class MessageFragment : Fragment() {
-
-    private lateinit var messageViewModel: MessageViewModel
-    private var _binding: FragmentMessageBinding? = null
+class MenuFragment : Fragment() {
+    private lateinit var menuViewModel: MenuViewModel
+    private var _binding: FragmentMenuBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -20,12 +19,11 @@ class MessageFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentMessageBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+    ): View {
+        _binding = FragmentMenuBinding.inflate(inflater, container, false)
 
 
-        return root
+        return binding.root
     }
 
     override fun onDestroyView() {

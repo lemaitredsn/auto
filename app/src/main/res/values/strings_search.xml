@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_all">Все</string>
+    <string name="tab_bu">Б\\у</string>
+    <string name="tab_new">Новые</string>
+    <string name="tab_for_you">Для Вас</string>
+</resources>
