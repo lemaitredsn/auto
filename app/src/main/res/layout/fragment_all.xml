@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/button_choose_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_years_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_year_range"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_summ_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_summ_range"
+        app:layout_constraintStart_toEndOf="@id/button_years_range"
+        app:layout_constraintTop_toTopOf="@id/button_years_range" />
+
+    <Button
+        android:id="@+id/button_extra_params"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_params"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_summ_range"
+        app:layout_constraintTop_toTopOf="@id/button_years_range" />
+
+    <Button
+        android:id="@+id/button_choose_region"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_region"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/params" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_history"
+        android:layout_width="0dp"
+        android:layout_height="?android:actionBarSize"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_choose_region" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/advert_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="chipsGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_history" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipsGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/advert_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/advert_type">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_advert"
+            android:layout_width="wrap_content"
+            android:checkable="true"
+            android:layout_height="wrap_content"
+            android:text="объявление" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_model"
+            android:checkable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="модели" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/filter_model"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@id/advert_type"
+        app:layout_constraintEnd_toEndOf="@id/advert_type"
+        app:layout_constraintStart_toEndOf="@id/chipsGroup"
+        app:layout_constraintTop_toTopOf="@id/advert_type" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/params"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="button_years_range, button_summ_range"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_choose_model" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_ads"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/advert_type" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

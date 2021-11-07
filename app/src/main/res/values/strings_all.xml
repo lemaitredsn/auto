@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="choose_button">Марка, модель, поколение</string>
+    <string name="button_year_range">Год</string>
+    <string name="button_summ_range">Цена, руб</string>
+    <string name="button_params">ещё…</string>
+    <string name="button_region">Вся Россия</string>
+</resources>

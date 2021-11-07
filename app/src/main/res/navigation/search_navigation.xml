@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_navigation"
+    app:startDestination="@id/searchFlowFragment">
+    <fragment
+        android:id="@+id/searchFlowFragment"
+        android:name="ru.lemaitre.auto.features.search.flow.SearchFlowFragment"
+        android:label="SearchFlowFragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="ru.lemaitre.auto.features.search.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <dialog
+        android:id="@+id/modelCarDialogFragment"
+        android:name="ru.lemaitre.auto.features.search.search.model_car.ModelCarDialogFragment"
+        android:label="ModelCarDialogFragment" />
+
+</navigation>

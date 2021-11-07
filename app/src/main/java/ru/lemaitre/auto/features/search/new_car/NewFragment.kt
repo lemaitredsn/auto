@@ -1,4 +1,4 @@
-package ru.lemaitre.auto.features.search.b_u
+package ru.lemaitre.auto.features.search.new_car
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ru.lemaitre.auto.databinding.FragmentMenuBinding
 
-class BuFragment : Fragment() {
+class NewFragment : Fragment() {
 //    private lateinit var menuViewModel: MenuViewModel
     private var _binding: FragmentMenuBinding? = null
 
